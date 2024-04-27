@@ -1,20 +1,42 @@
-const panels = document.querySelectorAll(".panel");
+const carouselContainer = document.querySelector(".carousel-container");
+const carouselItems = document.querySelectorAll(".carousel-item");
+const prevBtn = document.querySelector(".carousel-prev");
+const nextBtn = document.querySelector(".carousel-next");
+const indicators = document.querySelectorAll(".carousel-indicator");
 
-function toggleOpen() {
-  this.classList.toggle("open");
+let currentIndex = 0;
+const itemWidth = carouselItems[0].offsetWidth;
+
+function moveCarousel(index) {
+  carouselContainer.style.transform = `translateX(-${index * itemWidth}px)`;
+  indicators.forEach((indicator, i) => {
+    indicator.classList.toggle("active", i === index);
+  });
 }
 
-function toggleActive(e) {
-  console.log(e.propertyName);
-  if (e.propertyName.includes("flex")) {
-    this.classList.toggle("open-active");
-  }
-}
+prevBtn.addEventListener("click", () => {
+  currentIndex =
+    (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+  moveCarousel(currentIndex);
+});
 
-panels.forEach((panel) => panel.addEventListener("click", toggleOpen));
-panels.forEach((panel) =>
-  panel.addEventListener("transitionend", toggleActive)
-);
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % carouselItems.length;
+  moveCarousel(currentIndex);
+});
+
+indicators.forEach((indicator, index) => {
+  indicator.addEventListener("click", () => {
+    currentIndex = index;
+    moveCarousel(currentIndex);
+  });
+});
+
+// Automatically move the carousel every 5 seconds
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % carouselItems.length;
+  moveCarousel(currentIndex);
+}, 5000);
 
 function debounce(func, wait = 20, immediate = true) {
   var timeout;
