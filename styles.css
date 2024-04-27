@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  background: #ffc600;
   font-family: "helvetica neue";
   font-size: 1.2em;
   font-weight: 200;
@@ -9,6 +8,7 @@ html {
 body {
   margin: 0;
 }
+
 *,
 *:before,
 *:after {
@@ -25,6 +25,7 @@ body {
   width: 100%;
   height: 500px;
   overflow: hidden;
+  z-index: 1; /* Ensure the carousel is below the navbar */
 }
 
 .carousel-container {
@@ -32,19 +33,23 @@ body {
   width: 100%;
   height: 100%;
   transition: transform 0.5s ease-in-out;
+  z-index: 3; /* Ensure the carousel container is in the foreground */
 }
 
 .carousel-item {
-  flex: 0 0 100%;
-  position: relative;
+  position: relative; /* Ensure the carousel items are positioned relatively */
   width: 100%;
   height: 100%;
 }
 
 .carousel-item img {
+  position: absolute; /* Position images absolutely within carousel items */
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 1; /* Ensure the carousel images are in the foreground */
+  top: 0;
+  left: 0;
 }
 
 .carousel-caption {
@@ -55,6 +60,7 @@ body {
   text-align: center;
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  z-index: 2; /* Ensure the carousel caption is on top of the image */
 }
 
 .carousel-caption h1 {
@@ -76,6 +82,7 @@ body {
   justify-content: space-between;
   width: 100%;
   padding: 0 2rem;
+  z-index: 2; /* Ensure the carousel controls are on top of the image */
 }
 
 .carousel-controls button {
@@ -99,6 +106,7 @@ body {
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
+  z-index: 2; /* Ensure the carousel indicators are on top of the image */
 }
 
 .carousel-indicator {
@@ -129,6 +137,7 @@ img {
   background: white;
   padding: 40px;
   text-align: justify;
+  z-index: 1; /* Ensure the site content is below the carousel */
 }
 
 .align-left {
