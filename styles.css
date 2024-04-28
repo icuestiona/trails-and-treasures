@@ -22,45 +22,47 @@ body {
 
 .hero-carousel {
   position: relative;
-  width: 100%;
-  height: 500px;
   overflow: hidden;
-  z-index: 1; /* Ensure the carousel is below the navbar */
+  width: 100%;
+  height: 100vh;
 }
 
 .carousel-container {
   display: flex;
-  width: 100%;
+  width: 600%;
   height: 100%;
-  transition: transform 0.5s ease-in-out;
-  z-index: 3; /* Ensure the carousel container is in the foreground */
+  transition: transform 0.5s ease;
 }
 
 .carousel-item {
-  position: relative; /* Ensure the carousel items are positioned relatively */
+  flex: 0 0 16.66%;
   width: 100%;
   height: 100%;
+  position: relative; /* Added to position the caption */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
 }
 
 .carousel-item img {
-  position: absolute; /* Position images absolutely within carousel items */
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1; /* Ensure the carousel images are in the foreground */
-  top: 0;
-  left: 0;
 }
 
 .carousel-caption {
   position: absolute;
-  top: 50%;
+  bottom: 20px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  right: 0;
+  transform: translateX(-50%);
   text-align: center;
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  z-index: 2; /* Ensure the carousel caption is on top of the image */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
 }
 
 .carousel-caption h1 {
@@ -76,13 +78,12 @@ body {
 .carousel-controls {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 0 2rem;
-  z-index: 2; /* Ensure the carousel controls are on top of the image */
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .carousel-controls button {
@@ -101,22 +102,20 @@ body {
 
 .carousel-indicators {
   position: absolute;
-  bottom: 1rem;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  justify-content: center;
-  z-index: 2; /* Ensure the carousel indicators are on top of the image */
+  justify-content: center; /* Center the indicators horizontally */
 }
 
 .carousel-indicator {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin: 0 0.5rem;
+  background-color: #fff;
+  margin: 0 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
 }
 
 .carousel-indicator.active {
