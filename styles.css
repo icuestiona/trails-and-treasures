@@ -55,24 +55,31 @@ body {
 
 .carousel-caption {
   position: absolute;
-  bottom: 20px;
+  bottom: 100px;
   left: 50%;
   right: 0;
   transform: translateX(-50%);
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  padding: 10px;
+  padding: 30px;
 }
 
 .carousel-caption h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .carousel-caption p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+}
+
+#info {
+  background-color: tomato;
+  color: white;
+  border: 1px solid tomato;
 }
 
 .carousel-controls {
@@ -90,7 +97,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
   color: #333;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
@@ -102,8 +109,8 @@ body {
 
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
+  bottom: 20px;
+  left: 35%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center; /* Center the indicators horizontally */
