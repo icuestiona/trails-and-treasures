@@ -23,9 +23,8 @@ body {
   min-height: 100vh;
   overflow: hidden;
   display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  justify-content: center;
+  align-items: center;
 }
 
 .panel {
@@ -34,17 +33,18 @@ body {
   color: white;
   text-align: center;
   align-items: center;
-  /* Safari transitionend event.propertyName === flex */
-  /* Chrome + FF transitionend event.propertyName === flex-grow */
   transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
     flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
   font-size: 1.2em;
   background-size: cover;
   background-position: center;
-  flex: 1;
   justify-content: center;
   display: flex;
+  flex: 1;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Add this line to prevent content overflow */
 }
 
 .panel1 {
@@ -93,20 +93,22 @@ body {
   text-transform: uppercase;
   font-family: "Kaushan Script", cursive;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .panel p:nth-child(2) {
-  font-size: 2.8em;
+  font-size: 2em;
 }
 
 .panel.open {
   flex: 5;
-  font-size: 2.5em;
+  font-size: 2.3em;
+  overflow: auto; /* Add this line to enable scrolling for the open panel */
 }
 
 h1 {
   margin-top: 0;
+  font-weight: 600;
 }
 
 img {
