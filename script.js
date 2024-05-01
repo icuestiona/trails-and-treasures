@@ -1,20 +1,68 @@
-const panels = document.querySelectorAll(".panel");
+document.addEventListener("DOMContentLoaded", function () {
+  const carouselContainer = document.querySelector(".carousel-container");
+  const carouselItems = document.querySelectorAll(".carousel-item");
+  const prevButton = document.querySelector(".carousel-prev");
+  const nextButton = document.querySelector(".carousel-next");
+  const indicators = document.querySelectorAll(".carousel-indicator");
 
-function toggleOpen() {
-  this.classList.toggle("open");
-}
+  let currentIndex = 0;
 
-function toggleActive(e) {
-  console.log(e.propertyName);
-  if (e.propertyName.includes("flex")) {
-    this.classList.toggle("open-active");
+  function showSlide(index) {
+    carouselItems.forEach((item, i) => {
+      if (i === index) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+    indicators.forEach((indicator, i) => {
+      if (i === index) {
+        indicator.classList.add("active");
+      } else {
+        indicator.classList.remove("active");
+      }
+    });
   }
-}
 
-panels.forEach((panel) => panel.addEventListener("click", toggleOpen));
-panels.forEach((panel) =>
-  panel.addEventListener("transitionend", toggleActive)
-);
+  showSlide(currentIndex);
+
+  prevButton.addEventListener("click", function () {
+    currentIndex =
+      (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+    showSlide(currentIndex);
+  });
+
+  nextButton.addEventListener("click", function () {
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    showSlide(currentIndex);
+  });
+
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener("click", () => {
+      currentIndex = index;
+      showSlide(currentIndex);
+    });
+  });
+
+  let slideInterval;
+  // Remove the previous interval to prevent conflicts
+  function startAutoSlide() {
+    slideInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % carouselItems.length;
+      showSlide(currentIndex);
+    }, 5000);
+  }
+  startAutoSlide();
+
+  // Clear the interval when interacting with the carousel
+  carouselContainer.addEventListener("mouseover", () => {
+    clearInterval(slideInterval);
+  });
+
+  carouselContainer.addEventListener("mouseout", () => {
+    startAutoSlide();
+  });
+});
 
 function debounce(func, wait = 20, immediate = true) {
   var timeout;
