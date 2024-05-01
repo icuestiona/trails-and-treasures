@@ -55,14 +55,15 @@ body {
 
 .carousel-caption {
   position: absolute;
-  bottom: 100px;
+  bottom: 80px;
   left: 50%;
   right: 0;
+  padding: 2rem;
+  text-align: center;
   transform: translateX(-50%);
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  padding: 30px;
 }
 
 .carousel-caption h1 {
@@ -72,14 +73,19 @@ body {
 }
 
 .carousel-caption p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 
-#info {
+p strong {
+  font-weight: bold;
+}
+
+.carousel-caption #info {
+  padding: 15px;
   background-color: tomato;
-  color: white;
   border: 1px solid tomato;
+  color: white;
 }
 
 .carousel-controls {
@@ -125,9 +131,12 @@ body {
   cursor: pointer;
 }
 
+.carousel-indicator.active {
+  background-color: white;
+}
+
 h1 {
   margin-top: 0;
-  font-weight: 600;
 }
 
 img {
@@ -136,11 +145,15 @@ img {
 
 .site-wrap {
   max-width: 900px;
-  margin: 80px auto;
+  margin: 60px auto;
   background: white;
   padding: 40px;
   text-align: justify;
   z-index: 1; /* Ensure the site content is below the carousel */
+}
+
+.site-wrap h1 {
+  line-height: 1.5;
 }
 
 .align-left {
@@ -168,8 +181,98 @@ img {
   transform: translateX(0%) scale(1);
 }
 
-@media only screen and (max-width: 600px) {
-  .panel p {
-    font-size: 1em;
+@media only screen and (max-width: 767px) {
+  .hero-carousel {
+    height: auto;
+  }
+
+  .carousel-container {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .carousel-item {
+    flex: 0 0 100%;
+    height: auto;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .carousel-caption {
+    position: static;
+    transform: none;
+    background-color: rgba(244, 240, 5, 0.8);
+    padding: 1.5rem;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #0f0829;
+  }
+
+  .carousel-caption p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #0f0829;
+  }
+
+  .carousel-caption #info {
+    padding: 10px;
+  }
+
+  .carousel-controls {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .carousel-controls button {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .carousel-indicators {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+  }
+
+  .carousel-indicator {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+  }
+  .site-wrap {
+    padding: 20px;
+    margin: 30px auto;
+  }
+
+  .site-wrap h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .align-left,
+  .align-right {
+    float: none;
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+
+  .align-left.slide-in,
+  .align-right.slide-in {
+    transform: translateX(0) translateY(30%) scale(0.95);
+  }
+
+  .slide-in.active {
+    transform: translateX(0) translateY(0) scale(1);
   }
 }
