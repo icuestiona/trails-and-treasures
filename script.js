@@ -100,3 +100,11 @@ function checkSlide(e) {
 }
 
 window.addEventListener("scroll", debounce(checkSlide));
+
+const mapContainers = document.querySelectorAll(".map-container");
+
+mapContainers.forEach((container) => {
+  container.addEventListener("click", () => {
+    container.classList.toggle("expanded");
+  });
+});
