@@ -256,29 +256,31 @@ img {
 
 .about-us,
 .contact-us {
-  padding: 80px 0;
+  padding: 70px 0;
   background-color: #f8f8f8;
 }
 
-.about-us .contact-us .container {
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.about-us .grid-container {
+.grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
 }
 
-.about-content {
+.about-content,
+.contact-info {
   padding: 20px;
   border-radius: 10px;
   color: #333;
 }
 
-.about-us h2 {
+.about-us h2,
+.contact-us h2 {
   font-size: 2, 2rem;
   font-weight: 700;
   margin-bottom: 30px;
@@ -334,24 +336,9 @@ blockquote {
 
 /*CONTACT*/
 .contact-us .container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
-}
-
-.contact-us .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 40px;
-}
-
-.contact-us h2 {
-  font-size: 2, 2rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-  text-align: center;
 }
 
 .form-container,
@@ -360,6 +347,11 @@ blockquote {
   padding-right: 20px;
 }
 
+.form-container {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+}
 .form-group {
   margin-bottom: 20px;
 }
@@ -390,14 +382,12 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #8ac2fe;
 }
 
 .contact-info {
-  flex: 1;
   padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-left: 50px;
 }
 
 .contact-info h2 {
@@ -408,11 +398,11 @@ button:hover {
 .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .contact-item i {
-  font-size: 20px;
+  font-size: 22px;
   margin-right: 20px;
   color: #007bff;
 }
