@@ -35,12 +35,23 @@
     <!-- inicio  NAVBAR-->
     <nav class="navbar">
       <div>
-        <img src="images/logo-no-background.png" id="logo" />
+        <a href="/" title="Homepage">
+          <img src="images/logo-no-background.png" id="logo"
+        /></a>
       </div>
       <ul id="nav_bar">
         <li class="nav-links"><a href="./about.html">About Us</a></li>
-        <li class="nav-links"><a href="destinations.html">Destinations</a></li>
-        <li class="nav-links"><a href="#">Contact</a></li>
+        <li class="nav-links dropdown">
+          <a>Destinations</a>
+          <div class="dropdown-content">
+            <a href="https://colombia.travel/en" target="_blank">Colombia</a>
+            <a href="https://www.romaniatourism.com/" target="_blank"
+              >Romania</a
+            >
+            <a href="destination.html">Spain</a>
+          </div>
+        </li>
+        <li class="nav-links"><a href="./about.html#contact">Contact</a></li>
         <li class="nav-links">
           <a href="tel:+123456789"
             ><i class="fas fa-phone"></i> +1 234 567 890 📞
@@ -202,11 +213,19 @@
         <div class="footer-content">
           <div class="footer-links">
             <ul>
-              <li><a href="Home">Home</a></li>
-              <li><a href="Colombia">Colombia</a></li>
+              <li><a href="/">Home</a></li>
+              <li>
+                <a href="https://colombia.travel/en" target="_blank"
+                  >Colombia</a
+                >
+              </li>
               <li><a href="Spain">Spain</a></li>
-              <li><a href="Romania">Romania</a></li>
-              <li><a href="Contact">Contact</a></li>
+              <li>
+                <a href="https://www.romaniatourism.com/" target="_blank"
+                  >Romania</a
+                >
+              </li>
+              <li><a href="./about.html#contact">Contact</a></li>
             </ul>
           </div>
           <div class="footer-social">
