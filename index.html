@@ -32,28 +32,31 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- inicio  NAVBAR-->
+    <!-- start NAVBAR-->
     <nav class="navbar">
       <div>
-        <a href="/" title="Homepage">
-          <img src="images/logo-no-background.png" id="logo"
+        <a href="/index.html"
+          ><img src="images/logo-no-background.png" id="logo"
         /></a>
       </div>
+
       <ul id="nav_bar">
-        <li class="nav-links"><a href="./about.html">About Us</a></li>
+        <li class="nav-links">
+          <span><a href="./about.html">About Us</a></span>
+        </li>
         <li class="nav-links dropdown">
           <a>Destinations</a>
           <div class="dropdown-content">
-            <a href="https://colombia.travel/en" target="_blank">Colombia</a>
+            <a href="https://www.colombia.co/en/" target="_blank">Colombia</a>
             <a href="https://www.romaniatourism.com/" target="_blank"
               >Romania</a
             >
-            <a href="destination.html">Spain</a>
+            <a href="destinations.html">Spain</a>
           </div>
         </li>
         <li class="nav-links"><a href="./about.html#contact">Contact</a></li>
         <li class="nav-links">
-          <a href="tel:+123456789"
+          <a href="tel:+1234567890"
             ><i class="fas fa-phone"></i> +1 234 567 890 📞
           </a>
         </li>
@@ -63,12 +66,15 @@
         <button type="submit">Search</button>
       </div>
     </nav>
-    <!--End  NAVBAR-->
+    <!-- end NAVBAR-->
 
     <div class="hero-carousel">
       <div class="carousel-container">
         <div class="carousel-item active">
-          <img src="images/image1.jpg" alt="First slide" />
+          <img
+            src="images/image1.jpg"
+            alt="Castle in the Romanian countryside"
+          />
           <div class="carousel-caption">
             <h1>Three Treasures</h1>
             <p>Where culture, history and adventure meet!</p>
@@ -78,7 +84,7 @@
           </div>
         </div>
         <div class="carousel-item active">
-          <img src="images/image2.jpg" alt="Second slide" />
+          <img src="images/image2.jpg" alt="The Alhambra in Granada, Spain" />
           <div class="carousel-caption">
             <h1>Three Treasures</h1>
             <p>Where culture, history and adventure meet!</p>
@@ -88,7 +94,10 @@
           </div>
         </div>
         <div class="carousel-item active">
-          <img src="images/image3.jpg" alt="Third slide" />
+          <img
+            src="images/image3.jpg"
+            alt="Downtown of Cartagena de Indias, Colombia"
+          />
           <div class="carousel-caption">
             <h1>Three Treasures</h1>
             <p>Where culture, history and adventure meet!</p>
@@ -98,7 +107,7 @@
           </div>
         </div>
         <div class="carousel-item active">
-          <img src="images/image4.jpg" alt="Fourth slide" />
+          <img src="images/image4.jpg" alt="Romanian folk dances" />
           <div class="carousel-caption">
             <h1>Three Treasures</h1>
             <p>Where culture, history and adventure meet!</p>
@@ -108,7 +117,7 @@
           </div>
         </div>
         <div class="carousel-item active">
-          <img src="images/image5.jpg" alt="Fifth slide" />
+          <img src="images/image5.jpg" alt="Park Güell, Barcelona, Spain" />
           <div class="carousel-caption">
             <h1>Three Treasures</h1>
             <p>Where culture, history and adventure meet!</p>
@@ -118,7 +127,7 @@
           </div>
         </div>
         <div class="carousel-item active">
-          <img src="images/image6.jpg" alt="Sixth slide" />
+          <img src="images/image6.jpg" alt="Beach in Tayrona Park, Colombia" />
           <div class="carousel-caption">
             <h1>Three Treasures</h1>
             <p>Where culture, history and adventure meet!</p>
@@ -159,7 +168,11 @@
         preferences. So why wait? Let us help you plan your next adventure
         today.
       </p>
-      <img src="images/image7.jpg" class="align-left slide-in" />
+      <img
+        src="images/image7.jpg"
+        class="align-left slide-in"
+        alt="Aerial image of Madrid, Spain "
+      />
       <p>
         <strong>Spain</strong> is a traveler's paradise with its vibrant
         culture, rich history, and stunning landscapes. From the bustling
@@ -170,7 +183,11 @@
         itineraries that showcase the very best of Spain. Let us help you plan
         your next Spanish adventure today.
       </p>
-      <img src="images/image8.jpg" class="align-right slide-in" />
+      <img
+        src="images/image8.jpg"
+        class="align-right slide-in"
+        alt="Small village in Romania "
+      />
       <p>
         <strong>Romania</strong> beckons with its untouched natural beauty, rich
         history, and warm hospitality. From the rugged Carpathian Mountains to
@@ -183,7 +200,11 @@
         life. Come, discover Romania's magic with us and create unforgettable
         memories.
       </p>
-      <img src="images/image9.jpg" class="align-left slide-in" />
+      <img
+        src="images/image9.jpg"
+        class="align-left slide-in"
+        alt="Villages of the Colombian coffee growing region "
+      />
       <p>
         <strong>Colombia</strong> is a vibrant and diverse travel destination,
         offering a rich tapestry of experiences. Discover the country's bustling
@@ -195,7 +216,11 @@
         exploration, let us bring your Colombian dreams to life. Come,
         experience Colombia's magic with us and create unforgettable memories.
       </p>
-      <img src="images/image10.jpg" class="align-right slide-in" />
+      <img
+        src="images/image10.jpg"
+        class="align-right slide-in"
+        alt="Tourist watching the flowing of a river "
+      />
       <p>
         In <strong>Three Treasures</strong> our team of travel experts has
         extensive knowledge and experience in creating customized itineraries
@@ -204,7 +229,7 @@
         exploration, we have the expertise to make your dreams a reality.
       </p>
     </div>
-    <!-- FOOTER -->
+    <!-- start FOOTER -->
     <footer>
       <div class="container">
         <div class="footer-logo">
@@ -213,13 +238,13 @@
         <div class="footer-content">
           <div class="footer-links">
             <ul>
-              <li><a href="/">Home</a></li>
+              <li><a href="/index.html">Home</a></li>
               <li>
-                <a href="https://colombia.travel/en" target="_blank"
+                <a href="https://www.colombia.co/en/" target="_blank"
                   >Colombia</a
                 >
               </li>
-              <li><a href="Spain">Spain</a></li>
+              <li><a href="destinations.html">Spain</a></li>
               <li>
                 <a href="https://www.romaniatourism.com/" target="_blank"
                   >Romania</a
@@ -231,16 +256,24 @@
           <div class="footer-social">
             <ul>
               <li>
-                <a href="FB"><img src="images/fb.png" alt="Facebook" /></a>
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><img src="images/fb.png" alt="Facebook"
+                /></a>
               </li>
               <li>
-                <a href="X"><img src="images/X.png" alt="Twitter" /></a>
+                <a href="https://twitter.com/" target="_blank"
+                  ><img src="images/X.png" alt="Twitter"
+                /></a>
               </li>
               <li>
-                <a href="IG"><img src="images/ins.png" alt="Instagram" /></a>
+                <a href="https://www.instagram.com/" target="_blank"
+                  ><img src="images/ins.png" alt="Instagram"
+                /></a>
               </li>
               <li>
-                <a href="EMAIL"><img src="images/email.png" alt="Email" /></a>
+                <a href="https://www.gmail.com/" target="_blank"
+                  ><img src="images/email.png" alt="Email"
+                /></a>
               </li>
             </ul>
           </div>
@@ -252,7 +285,7 @@
         </div>
       </div>
     </footer>
-    <!-- FOOTER -->
+    <!--end  FOOTER -->
     <script src="script.js"></script>
   </body>
 </html>
