@@ -15,40 +15,45 @@ body {
   box-sizing: inherit;
 }
 
-/*inicio NAVBAR*/
-navbar {
+/* Start NAVBAR*/
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   color: #000000;
   padding: 10px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 #logo {
   justify-content: flex-start;
-  width: 300px;
   height: auto;
-  margin-left: 20px;
+  width: 300px;
 }
 
 #nav_bar {
   display: flex;
   align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 #nav_bar li {
-  padding: 10px;
-  list-style: none;
+  position: relative;
+  margin: 0 10px;
 }
 
 .nav-links a {
   color: inherit;
   text-decoration: none;
+  padding: 10px;
 }
 
-.nav-links a:hover {
-  color: #0056b3;
+.nav-links:hover {
+  background-color: #f0f0f0;
 }
 
 .dropdown {
@@ -61,6 +66,9 @@ navbar {
   background-color: #f9f9f9;
   min-width: 160px;
   z-index: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .dropdown-content a {
@@ -79,8 +87,13 @@ navbar {
   display: block;
 }
 
+#phone-icon {
+  float: right;
+  margin-left: auto;
+}
+
 #phone-icon a {
-  color: black;
+  color: brown;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -93,7 +106,7 @@ navbar {
 #search-form {
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 #search-form input[type="text"] {
@@ -101,12 +114,11 @@ navbar {
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-right: 5px;
-  flex: 1;
 }
 
 #search-form button {
   padding: 5px 10px;
-  background-color: orange;
+  background-color: brown;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -117,7 +129,7 @@ navbar {
   background-color: #0056b3;
 }
 
-/* fin NAVBAR*/
+/* End NAVBAR*/
 
 .hero-carousel {
   position: relative;
@@ -452,13 +464,113 @@ button:hover {
   font-weight: bold;
 }
 
+/*COUNTRIES*/
+
+/* start ARTICLES PAGE DESTINATIONS */
+
+.destinations-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  padding: 10px 50px 20px;
+}
+
+h3 {
+  display: flex;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+/*where to*/
+#where {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+#where_left,
+#where_right {
+  width: 48%;
+  padding: 10px 50px 20px;
+}
+
+#where_left img,
+#where_right img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+#where_left p,
+#where_right p {
+  line-height: 1.5;
+}
+
+#where p:last-child {
+  margin-top: 20px;
+}
+
+/* culture & traditions*/
+
+#culture-traditions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+#culture-traditions article {
+  width: 48%;
+  padding: 10px 50px 20px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.pic-castells {
+  width: 41%;
+  height: auto;
+  margin-inline-end: 50px;
+  margin-top: 20px;
+}
+
+/* meal and facts */
+#meals-and-facts {
+  display: flex;
+  justify-content: space-between;
+}
+
+#meals-and-facts article {
+  width: 48%;
+  padding: 10px 50px 20px;
+}
+
+#meals-and-facts h3 {
+  margin-bottom: 10px;
+}
+
+#meals-and-facts p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#meals-and-facts img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/*end ARTICLES PAGE DESTINATIONS */
+
 /*FOOTER*/
 footer {
   position: static;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #fafa00;
+  background-color: #ffb62e;
   color: #000000;
   padding: 10px;
 }
@@ -520,7 +632,7 @@ footer {
   text-align: center;
 }
 
-/*FOOTER*/
+/*End FOOTER*/
 
 @media only screen and (max-width: 767px) {
   .hero-carousel {
