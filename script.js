@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   let slideInterval;
+
   // Remove the previous interval to prevent conflicts
   function startAutoSlide() {
     slideInterval = setInterval(() => {
@@ -62,6 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
   carouselContainer.addEventListener("mouseout", () => {
     startAutoSlide();
   });
+});
+
+// Add event listener to the "More info" button
+const moreInfoButton = document.querySelector("#info a");
+moreInfoButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  window.location.href = moreInfoButton.getAttribute("href");
 });
 
 function debounce(func, wait = 20, immediate = true) {
