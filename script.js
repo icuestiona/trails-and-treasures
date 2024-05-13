@@ -1,3 +1,15 @@
+// About - Zoom maps
+document.addEventListener("DOMContentLoaded", function () {
+  const mapContainers = document.querySelectorAll(".map-container");
+
+  mapContainers.forEach((container) => {
+    container.addEventListener("click", () => {
+      container.classList.toggle("expanded");
+    });
+  });
+});
+
+//HERO CAROUSEL
 document.addEventListener("DOMContentLoaded", function () {
   const carouselContainer = document.querySelector(".carousel-container");
   const carouselItems = document.querySelectorAll(".carousel-item");
@@ -72,6 +84,7 @@ moreInfoButton.addEventListener("click", function (event) {
   window.location.href = moreInfoButton.getAttribute("href");
 });
 
+// Scroll countries
 function debounce(func, wait = 20, immediate = true) {
   var timeout;
   return function () {
@@ -108,11 +121,3 @@ function checkSlide(e) {
 }
 
 window.addEventListener("scroll", debounce(checkSlide));
-
-const mapContainers = document.querySelectorAll(".map-container");
-
-mapContainers.forEach((container) => {
-  container.addEventListener("click", () => {
-    container.classList.toggle("expanded");
-  });
-});
