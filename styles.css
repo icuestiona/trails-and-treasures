@@ -23,7 +23,7 @@ body {
   align-items: center;
   background-color: white;
   color: #000000;
-  padding: 10px;
+  padding: 20px;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -196,7 +196,16 @@ p strong {
   padding: 15px;
   background-color: tomato;
   border: 1px solid tomato;
-  color: white;
+}
+
+.carousel-caption #info:hover {
+  background-color: #2188f7;
+  border: 1px solid #2188f7;
+}
+
+.carousel-caption #info a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .carousel-controls {
@@ -321,7 +330,7 @@ img {
 
 .about-us h2,
 .contact-us h2 {
-  font-size: 2, 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
@@ -338,7 +347,7 @@ blockquote {
 }
 
 .about-content p {
-  font-size: 18px;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: justify;
@@ -358,7 +367,7 @@ blockquote {
 }
 
 .map-container img {
-  width: 90%;
+  width: 100%;
   height: auto;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -378,13 +387,14 @@ blockquote {
 .contact-us .container {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .form-container,
 .contact-info {
   flex: 1;
   padding-right: 20px;
+  margin-top: 40px;
 }
 
 .form-container {
@@ -392,6 +402,7 @@ blockquote {
   padding: 40px;
   border-radius: 10px;
 }
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -406,7 +417,7 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  width: calc(100% - 20px);
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -425,24 +436,32 @@ button:hover {
   background-color: #8ac2fe;
 }
 
+.call-to-action {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .contact-info {
-  padding: 40px;
-  margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0;
+  margin-top: 5px;
 }
 
 .contact-info h2 {
-  font-size: 24px;
+  font-size: 1.7rem;
   margin-bottom: 20px;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  flex-basis: 50%;
 }
 
 .contact-item i {
-  font-size: 22px;
+  font-size: 1.37rem;
   margin-right: 20px;
   color: #007bff;
 }
@@ -456,12 +475,6 @@ button:hover {
 .contact-item p {
   font-size: 0.8rem;
   margin-bottom: 0;
-}
-
-.call-to-action {
-  margin-top: 40px;
-  font-size: 18px;
-  font-weight: bold;
 }
 
 /*COUNTRIES*/
@@ -488,6 +501,7 @@ h3 {
 /*where to*/
 #where {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 40px;
 }
@@ -518,27 +532,51 @@ h3 {
 
 #culture-traditions {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 40px;
 }
 
-#culture-traditions article {
+#culture_article {
   width: 48%;
-  padding: 10px 50px 20px;
-  display: inline;
-  margin-right: 10px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
 }
 
-.pic-castells {
-  width: 41%;
+#culture_article .culture-content {
+  float: left;
+}
+
+.culture-content h3 {
+  display: flex;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#culture_article p {
+  line-height: 1.6;
+}
+
+.culture-article-img {
+  width: 48%;
+  position: relative;
+  padding: 50px;
+  margin-top: 120px;
+}
+
+.culture-article-img img {
+  width: 100%;
   height: auto;
-  margin-inline-end: 50px;
-  margin-top: 20px;
+  float: right;
 }
 
 /* meal and facts */
 #meals-and-facts {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -634,6 +672,65 @@ footer {
 
 /*End FOOTER*/
 
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  #logo {
+    width: 180px;
+    margin-bottom: 10px;
+  }
+
+  #nav_bar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  #nav_bar li {
+    margin: 5px 0;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 8px 0;
+  }
+
+  .dropdown-content {
+    position: static;
+    display: none;
+    width: 100%;
+    min-width: auto;
+  }
+
+  .dropdown-content a {
+    padding: 8px 20px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  #phone-icon {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  #search-form {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  #search-form input[type="text"] {
+    width: calc(100% - 80px);
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .hero-carousel {
     height: auto;
@@ -727,5 +824,97 @@ footer {
 
   .slide-in.active {
     transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #culture-traditions {
+    flex-direction: column;
+  }
+
+  #culture_article,
+  .culture-article-img {
+    width: 100%;
+  }
+
+  .culture-article-img img {
+    float: none;
+  }
+
+  #where_left,
+  #where_right,
+  #meals-and-facts article {
+    width: 100%;
+  }
+
+  #where_left img,
+  #where_right img,
+  #meals-and-facts img {
+    margin-top: 10px;
+  }
+
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+  }
+
+  #meals-and-facts p,
+  #culture_article p {
+    font-size: 0.9rem;
+  }
+
+  #meals-and-facts img,
+  #culture_article img,
+  .culture-article-img img {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us.container {
+    max-width: 720px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .infographic-maps {
+    grid-template-columns: 1fr;
+  }
+
+  .map-container img {
+    width: 80%;
+  }
+
+  .contact-us .container {
+    flex-direction: column;
+  }
+
+  .form-container,
+  .contact-info {
+    padding-right: 0;
+  }
+
+  .contact-info {
+    margin-top: 40px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .contact-item i {
+    font-size: 1.2rem;
+    margin-right: 15px;
+  }
+
+  .contact-item h3 {
+    font-size: 0.9rem;
+  }
+
+  .contact-item p {
+    font-size: 0.7rem;
   }
 }
