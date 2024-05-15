@@ -131,6 +131,8 @@ body {
 
 /* End NAVBAR*/
 
+/* HERO - CAROUSEL*/
+
 .hero-carousel {
   position: relative;
   overflow: hidden;
@@ -274,6 +276,7 @@ img {
 
 .site-wrap h1 {
   line-height: 1.5;
+  font-weight: 600;
 }
 
 .align-left {
@@ -540,6 +543,7 @@ h3 {
   width: 48%;
   padding: 10px 20px;
   margin-bottom: 20px;
+  display: flex;
 }
 
 #culture_article .culture-content {
@@ -755,7 +759,7 @@ footer {
   .carousel-caption {
     position: static;
     transform: none;
-    background-color: rgba(244, 240, 5, 0.8);
+    background-color: rgb(0, 0, 255, 0.3);
     padding: 1.5rem;
   }
 
@@ -827,23 +831,12 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-  #culture-traditions {
-    flex-direction: column;
-  }
-
-  #culture_article,
-  .culture-article-img {
-    width: 100%;
-  }
-
-  .culture-article-img img {
-    float: none;
-  }
-
   #where_left,
   #where_right,
   #meals-and-facts article {
     width: 100%;
+    padding: 0;
+    margin-top: 10px;
   }
 
   #where_left img,
@@ -858,15 +851,40 @@ footer {
     font-size: 1.8rem;
   }
 
-  #meals-and-facts p,
-  #culture_article p {
-    font-size: 0.9rem;
+  #culture-traditions {
+    flex-direction: column;
+    margin-top: 5px;
+  }
+
+  #culture_article,
+  .culture-article-img {
+    width: 100%;
+    padding: 0;
+    margin-top: 5px;
+  }
+
+  .culture-article-img img {
+    width: 100%;
+    float: none;
+  }
+
+  .culture-content h3,
+  #culture-traditions h3,
+  #meals-and-facts h3,
+  #fun-facts h3 {
+    font-size: 1.7rem;
+    text-align: center;
   }
 
   #meals-and-facts img,
   #culture_article img,
   .culture-article-img img {
     margin-top: 10px;
+  }
+
+  #meals-and-facts p,
+  #culture_article p {
+    text-align: justify;
   }
 }
 
