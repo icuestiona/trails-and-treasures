@@ -673,6 +673,10 @@ footer {
   text-align: center;
 }
 
+.footer-made-by a {
+  text-decoration: none;
+}
+
 /*End FOOTER*/
 
 @media (max-width: 767px) {
